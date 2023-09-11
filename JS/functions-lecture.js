@@ -6,7 +6,7 @@
 //start with a `function` keyword
 //follow with the name of the function
 //think of what information you need in order to make the program work: these are the parameters
-//you name the parameters and put them in a comma seperated list inside teh parentheses
+//you name the parameters and put them in a comma seperated list inside the parentheses
 //open up a pair of curly braces
 //inside the curly braces you put the code that will actually run
 //this is called the code block
