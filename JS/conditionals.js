@@ -1,10 +1,26 @@
-// "use strict";
-// //alert("Hello");
-// /* ########################################################################## */
-//
+"use strict"
+
+//alert("Hello");
+
+
+/* ########################################################################## */
+
 // /**
 //  * TODO:
 //  * Create a function named `analyzeColor` that accepts a string that is a color
+// function analyzeColor(name){
+//     if (name === 'blue') {
+//         console.log(`Blue is the color of my mood.`);
+//     } else if (name === 'green') {
+//         console.log(`Green is the color of the grass.`);
+//     } else if (name === 'yellow') {
+//         console.log(`Yellow is the color of the sun, son!`);
+//     } else {
+//         console.log(`That color is does not compute. Grrr...crash!`);
+//     }
+// }
+// console.log(analyzeColor('yellow'));
+
 //  * name as input. This function should return a message which relates to the
 //  * color stated in the argument of the function. For colors you do not have
 //  * responses written for, return a string stating so
@@ -21,67 +37,51 @@
 //  * Test your function by passing various string literals to it and
 //  * console.logging the function's return value
 //  */
-//
-//
-// // function analyzeColor(color) {
-// //     if (color === "red") {
-// //         return "Red is the color of love.";
-// //     } else if (color === "blue") {
-// //         return "Blue is the color of the ocean.";
-// //     } else if (color === "Yellow") {
-// //         return "Yellow is the color of corn.";
-// //     } else if (color === "brown") {
-// //         return "Brown is the color of the earth.";
-// //     } else {
-// //         return color + " this color is not recognized.";
-// //     }
-// //}
-// // console.log(analyzeColor("green"));
-//
-//
-//
-// // Don't change the next two lines!
-// // These lines create two variables for you:
-// // - `colors`: a list of the colors of the rainbow
-// // - `randomColor`: contains a single random color value from the list (this
-// //                  will contain a different color every time the page loads)
-// var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-// var randomColor = colors[Math.floor(Math.random() * colors.length)];
-// /**
-//  * TODO:
-//  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
-//  * You should see a different message every time you refresh the page
-//  */
-// // console.log(randomColor);
-//
-//
-//
-//
-//
-// /**
-//  * TODO:
-//  * Comment out the code above, and refactor your function to use a switch-case statement
-//  */
-//
-// switch (randomColor) {
-//     case "red" :
-//         alert ("Red is the color of love.");
+
+
+
+
+
+
+// Don't change the next two lines!
+// These lines create two variables for you:
+// - `colors`: a list of the colors of the rainbow
+// - `randomColor`: contains a single random color value from the list (this
+//                  will contain a different color every time the page loads)
+var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+var randomColor = colors[Math.floor(Math.random() * colors.length)];
+/**
+ * TODO:
+ * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
+ * You should see a different message every time you refresh the page
+ */
+// console.log(analyzeColor(randomColor));
+
+
+
+/**
+ * TODO:
+ * Comment out the code above, and refactor your function to use a switch-case statement
+ */
+
+// let name = randomColor;
+// let analyzeColor;
+// switch (name) {
+//     case 'blue':
+//         analyzeColor = console.log(`Blue is the color of my mood.`);
 //         break;
-//     case "blue" :
-//         alert ("Blue is the color of the ocean.");
+//     case 'green':
+//         analyzeColor = console.log(`Green is the color of the grass.`);
 //         break;
-//     case "Yellow" :
-//         alert ("Yellow is the color of corn.");
-//         break;
-//     case "brown" :
-//         alert ("Brown is the color of the earth.");
+//     case 'yellow':
+//         analyzeColor = console.log(`Yellow is the color of the sun, son!`);
 //         break;
 //     default:
-//         alert (randomColor + " this color is not recognized.");
-//         break;
+//         analyzeColor= console.log(`That color is does not compute. Grrr...crash!`);
 // }
-//
-//
+
+
+
 
 
 /**
@@ -91,9 +91,28 @@
  * function to show it to the user.
  */
 
-  // let color = prompt("Enter the first color that comes to mind...");
-// alert(analyzeColor(prompt"Enter the first color that comes to mind..."))
-  //   console.log(analyzeColor(color));
+let x = prompt(`Enter a color from the list, 'blue', 'green', 'yellow', 'pink'`);
+
+let name = String(x);
+
+switch (name) {
+    case 'blue':
+        alert("Blue is the color of my mood.");
+        break;
+    case 'green':
+        alert(`Green is the color of the grass.`);
+        break;
+    case 'yellow':
+        alert(`Yellow is the color of the sun, son!`);
+        break;
+    default:
+        alert(`That color is does not compute. Grrr...crash!`);
+}
+
+
+
+
+
 
 /* ########################################################################## */
 
@@ -116,24 +135,27 @@
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+let totalBill = prompt(`Please enter your total bill to see your discount.`);
 
-function calculateTotal(number, total) {
-    if (number === 0) {
-        return "Sorry, no discount today.  Better luck next time.";
-    } else if (number === 1) {
-        return "$" + (total - (total * .1)) + " Lucky You! You got 10% off today!";
-    }else if (number === 2) {
-        return "$" + (total - (total * .25)) + " Lucky You! You got 25% off today!";
-    }else if (number === 3) {
-        return "$" + (total - (total * .35)) + " Lucky You! You got 35% off today!";
-    }else if (number === 4) {
-        return "$" + (total - (total * .5)) + " Lucky You! You got 50% off today!";
-    }else if (number === 5) {
-        return (total - total) + " Lucky You! You got 100% off today!";
-    }
+
+function calculateTotal(luckyNumber){
+        if (luckyNumber === 0){
+            alert(`Sorry! Your luck number was ${luckyNumber} and you didn't get a discount.  Your bill is still $${totalBill}. Sad face emoji.`);
+        }else if (luckyNumber === 1) {
+            alert(`Not bad! Your lucky number is ${luckyNumber}, and you received 10% off your total bill of $${totalBill}, your new bill is $${totalBill - (totalBill *.10)}.`);
+        }else if (luckyNumber === 2) {
+            alert(`Pretty OK! Your lucky nubmer is ${luckyNumber} and you received 25% off your total bill of $${totalBill}. Your new bill is $${totalBill - (totalBill * .25)}.`);
+        }else if (luckyNumber === 3) {
+            alert(`Nice Job! Your lucky number is ${luckyNumber} and you received 33% off your total bill of $${totalBill}.  Your new bill is $${totalBill - (totalBill * .33)}.`);
+        }else if (luckyNumber === 4){
+            alert(`Karma Luck! Your lucky number is ${luckyNumber} and you received 45% off your total bill of $${totalBill}. Your new bill is $${totalBill - (totalBill * .45)}.`);
+        }else if(luckyNumber === 5) {
+            alert(`Mojo Lucky! Your lucky number is ${luckyNumber} and you received 100% off your bill of $${totalBill} is now FREE!!`);
+        }else {
+            alert(`It just didn't work. Keep shopping!`);
+        }
 }
-
-
+calculateTotal(3);
 
 /**
  * TODO:
@@ -145,10 +167,28 @@ function calculateTotal(number, total) {
  */
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
-// var total = prompt(`Enter your total bill and get lucky!`);
-//     alert(`Your lucky number is ${luckyNumber} and your new total is $${calculateTotal(luckyNumber, total)}`);
-//
 
+
+let luckyNumber = Math.floor(Math.random() * 6);
+
+function calculateTotal(luckyNumber){
+    if (luckyNumber === 0){
+        alert(`Sorry! Your luck number was ${luckyNumber} and you didn't get a discount.  Your bill is still $${totalBill}. Sad face emoji.`);
+    }else if (luckyNumber === 1) {
+        alert(`Not bad! Your lucky number is ${luckyNumber}, and you received 10% off your total bill of $${totalBill}, your new bill is $${(totalBill - (totalBill *.10)).toFixed(2)}.`);
+    }else if (luckyNumber === 2) {
+        alert(`Pretty OK! Your lucky nubmer is ${luckyNumber} and you received 25% off your total bill of $${totalBill}. Your new bill is $${(totalBill - (totalBill * .25)).toFixed(2)}.`);
+    }else if (luckyNumber === 3) {
+        alert(`Nice Job! Your lucky number is ${luckyNumber} and you received 33% off your total bill of $${totalBill}.  Your new bill is $${(totalBill - (totalBill * .33)).toFixed(2)}.`);
+    }else if (luckyNumber === 4){
+        alert(`Karma Luck! Your lucky number is ${luckyNumber} and you received 45% off your total bill of $${totalBill}. Your new bill is $${(totalBill - (totalBill * .45)).toFixed(2)}.`);
+    }else if(luckyNumber === 5) {
+        alert(`Mojo Lucky! Your lucky number is ${luckyNumber} and you received 100% off your bill of $${totalBill} x 0 is FREE!!`);
+    }else {
+        alert(`It just didn't work. Keep shopping!`);
+    }
+}
+calculateTotal(luckyNumber);
 
 
 /**
@@ -170,69 +210,36 @@ function calculateTotal(number, total) {
  * HINT: The way we prompt for a value could be improved
  */
 
+
 if(confirm("Would you like to enter a number?")){
     const num = Number(prompt("Enter a number:"));
     if (isNaN(num)){
-        alert("That is not the correct data type")
+        alert("That is not the correct data type.");
     }else {
-        if (num % 2 === 0) {
-            alert("That is an even number.");
-        } else {
+        if (isEven(num)) {
             alert("That is an odd number");
-        }
+        } else (!isEven(num))
+        alert("That is an even number")
 
-        alert(`${num} plus 100 equals ${num + 100}`);
-
-        if (num < 0) {
-            alert("That number is negative");
-        } else {
-            alert("That number is positive")
-        }
     }
+        alert(`${num} plus 100 equals ${add100(num)}`);
+
+        if (!isPositive(num)){
+            alert("That number is negative.");
+        }else{
+            alert("That number is positive.");
+        }
 
 }
 
+function isEven(number){
+    return number % 2 !== 0;
+}
 
+function isPositive(number){
+    return number >= 0;
+}
 
-// function isEven(number){
-//     return number % 2 === 0;
-// }
-//
-// function isPositive(number){
-//     return number >= 0;
-// }
-// function plus100(number){
-//     return number + 100;
-// }
-
-
-//Bonus
-
-// ### IF / ELSE IF / ELSE
-//
-// #### Create a function called `getToDestination` which will help determine how a person can get to their destination!
-//
-//     It will accept 4 arguments and the parameter names are:
-//
-//     - age - the age of the rider
-// - isInsured - a boolean telling the function if the rider has insurance
-// - hasCar - a boolean describing if the rider has a car
-// - canGetRideshare - boolean describing if the rider can get a ride share (Uber, etc)
-//
-// ---
-//     1. If the rider is over 16, has insurance, and has a car then they can use their own vehicle
-// 2. If the rider is not over 16, has no insurance, OR has no car but they CAN get a rideshare, then they call up a rideshare service
-// 3. If the rider meets none of the above, they should call a friend for a ride!
-//
-//     This `getToDestination` should not return any value, but rather console log based on the conditions met.
-
-function getToDestination(age, isInsured, hasCar, canGetRideShare){
-    if (age >= 16 && is isInsured && hasCar){
-        console.log("This person can use their own car");
-    }
-    if ((age < 16 || !isInsured || !hasCar) && canGetRideShare){
-        console.log("This person can use rideshare");
-    } else {
-        console.log("This person should call a friend for a ride.");
-    }
+function add100(number){
+    return number + 100;
 }
