@@ -15,7 +15,13 @@
          *  > console.log(person.lastName) // "Sanchez"
          */
 
+const person = {
+        firstName: "Rick",
+        lastName: "Sanchez"
+        };
 
+console.log(person.firstName);
+console.log(person.lastName);
 
         /**
          * TODO:
@@ -26,6 +32,12 @@
          * Example
          * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
          */
+person.sayHello = function(){
+        return (`Hello from ${person.firstName}  ${person.lastName}!`);
+        }
+
+console.log(person.sayHello());
+
 
         /** TODO:
          * HEB has an offer for the shoppers that buy products amounting to
@@ -40,12 +52,40 @@
          * represents one shopper. Use a foreach loop to iterate through the array,
          * and console.log the relevant messages for each person
          */
+//use conditionals...if customer buys more than $200 they get 12% discount include total bill after discount
+//display a line with the name of the person the amount spent before the discount, the discount (if any), and the total after the discount.
+//each object represents one shopper
+        let shoppers = [
+            {name: 'Cameron', amount: 180},
+            {name: 'Ryan', amount: 250},
+            {name: 'George', amount: 320}
+        ];
 
-        // var shoppers = [
-        //     {name: 'Cameron', amount: 180},
-        //     {name: 'Ryan', amount: 250},
-        //     {name: 'George', amount: 320}
-        // ];
+function exercise3(){
+        for (const shopper of shoppers) {
+                printShopper(shopper);
+        }
+
+}
+
+        function printShopper(shopper) {
+        let output = `Name: ${shopper.name} Amount: ${shopper.amount}`;
+
+        if(shopper.amount > 200) {
+                let discount = shopper.amount * 0.12;
+                discount = discount.toFixed(2);
+                output += ` 
+                Discount: $${discount}`;
+
+                let total = shopper.amount * 0.88;
+                total = total.toFixed(2);
+                output += `
+                Total: $${total}`;
+        }
+}
+        exercise3();
+
+
 
         /** TODO:
          * Create an array of objects that represent books and store it in a
@@ -59,6 +99,35 @@
          * > console.log(books[0].author.firstName) // "Douglas"
          * > console.log(books[0].author.lastName) // "Adams"
          */
+let books = [ {
+                title: "The Lost",
+                author:{
+                        firstName:"Jeffrey",
+                        lastName:"Hottsun"
+                }
+        },
+
+
+    {
+                        title:"Stoner",
+                        author:{
+                                firstName:"John",
+                                lastName:"Williams"
+                        }
+                },
+
+    {
+                        title: "Dune",
+                        author: {
+                                firstName: "Frank",
+                                lastName: "Herbert"
+                        }
+                }
+        ]
+
+console.log(books[0]);
+console.log(books[1].title)
+
 
         /**
          * TODO:
@@ -84,6 +153,18 @@
          *      ---
          *      ...
          */
+function printBooks(books) {
+        //for each book in the array print it out
+                for (let i= 0; i < books.length; i++) {
+                        const book = books[i];
+                        console.log(`Book #${i}
+                        Title: ${book}
+                        Author: ${book.author.firstName} ${book.author.lastName}
+                        ------------------------`)
+                }
+        }
+        printBooks(books);
+
 
         /**
          * Bonus:
@@ -96,3 +177,15 @@
          *   `showBookInfo` function.
          */
 
+function createBook(title, firstName, lastName){
+        const book = {
+                title,
+                author: {
+                        firstName,
+                        lastName
+                }
+        }
+        return book;
+        }
+        books.push(createBook("Misery", "Stephen", "King"));
+printBooks(books);
