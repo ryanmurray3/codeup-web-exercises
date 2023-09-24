@@ -1,0 +1,32 @@
+h1 {
+    text-align: center;
+}
+h3 {
+    color: #2349aa;
+    text-decoration: underline;
+}
+body {
+    background-color: #bb90bb;
+    font-family: Ayuthaya;
+}
+
+ul {
+    list-style: none;
+}
+
+.theta li::before {
+    list-style: none;
+    content: "\03B8";
+    padding: 10px;
+}
+
+td, tr {
+    font-size: 18px;
+    padding: 4px;
+}
+a {
+    color: #1b5959;
+}
+a:hover {
+    color: #f8f8b8;
+}
