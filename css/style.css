@@ -9,6 +9,15 @@ body {
     background-color: #bb90bb;
     font-family: Ayuthaya;
 }
+body {
+    color: gold;
+    position: relative;
+    z-index: 1;
+    background-image: url("https://img.freepik.com/premium-vector/scandinavian-viking-brush-wallpaper_144316-127.jpg?w=1060");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 ul {
     list-style: none;
