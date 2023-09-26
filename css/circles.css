@@ -1,0 +1,21 @@
+.circle-container {
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 1px solid black;
+    box-shadow: inset -20px -16px 100px #666;
+}
+.circle-container h3 {
+    text-align: center;
+
+}
+
+.little-circle {
+    box-shadow: 3px 0px 67px #666;
+    margin: 30px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
