@@ -18,11 +18,10 @@ form {
 }
 
 fieldset {
-    -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
     box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
     padding: 1em;
     background-color: white;
+    border:none;
     /* There must be 1em between the content and the border of this element */
     /* It should have no border */
     /* Its background should be white */
@@ -63,9 +62,11 @@ fieldset {
     color: white;
     font-weight: bold;
     border-width: 1px;
-    border-color: lightgrey;
+    border-color: black;
     padding: 8px;
     background-color: #0fb784;
+    border-radius: 2px;
+
 }
 
 .form-control {
@@ -79,7 +80,7 @@ fieldset {
     margin-bottom: 4px;
     padding-bottom: .5em;
     padding-top: .5em;
-    width: calc(100% / 1.005);
+    width: calc(100% / 1.008);
 }
 
 
