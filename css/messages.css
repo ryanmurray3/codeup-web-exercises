@@ -11,7 +11,7 @@ div.message.message-info {
     border-radius: 3.5px;
     background-color: #cdddff;
     color: #204f98;
-    font-size: 8px;
+    font-size: x-small;
     margin: 3px auto;
     padding: .5em;
     width: 80%;
@@ -22,7 +22,7 @@ div.message.message-success {
     border-radius: 3.5px;
     background-color: #cff3da;
     color: #2da952;
-    font-size: 8px;
+    font-size: x-small;
     margin: 3px auto;
     padding: .5em;
     width: 80%;
@@ -33,7 +33,7 @@ div.message.message-warning {
     border-radius: 3.5px;
     background-color: #fcfbc8;
     color: #9d9938;
-    font-size: 8px;
+    font-size: x-small;
     margin: 3px auto;
     padding: .5em;
     width: 80%;
@@ -44,7 +44,7 @@ div.message.message-error {
     border-radius: 3.5px;
     background-color: #fbd2d7;
     color: #ad444f;
-    font-size: 8px;
+    font-size: x-small;
     margin: 3px auto;
     padding: .5em;
     width: 80%;
