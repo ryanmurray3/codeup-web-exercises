@@ -1,10 +1,29 @@
+.planets {
+
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 10%;
+}
+
+.title {
+    display; flex;
+    justify-content: center;
+    padding-top: 10%;
+}
 .circle-container {
+
     align-items: center;
     width: 500px;
     height: 500px;
     border-radius: 50%;
     border: 1px solid black;
     box-shadow: inset -20px -16px 100px #666;
+    background-image: url("https://eoimages.gsfc.nasa.gov/images/imagerecords/0/885/modis_wonderglobe.jpg");
+    background-position: center;
+    background-size: 120%;
+    z-index: 1;
+
 }
 .circle-container h3 {
     text-align: center;
@@ -12,10 +31,37 @@
 }
 
 .little-circle {
+    background-blend-mode: hard-light;
+    position: relative;
     box-shadow: 3px 0px 67px #666;
-    margin: 30px;
+    margin: 40px;
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    border: 1px solid black;
+    border: 0px solid black;
+    background-image: url('https://spaceplace.nasa.gov/review/all-about-the-moon/the-moon-near-side.en.jpg') ;
+    background-size: 112%;
+    background-position: center;
+    z-index: 2;
 }
+
+body {
+    background-color: black;
+}
+
+body video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Set the z-index to -1 to position the video behind other elements */
+}
+
+ h1 {
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+}
+

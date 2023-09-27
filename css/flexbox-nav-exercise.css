@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Montserrat, Work Sans;
+
+}
+
+footer {
+    background: grey;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+h2 {
+    font-size: 2em;
+}
+footer h2 {
+    display: flex;
+    justify-content: center;
+
+}
+
+footer a {
+    color: black;
+}
+footer .icon-wrapper:hover,
+footer .top-footer a:hover {
+    color: black;
+    background: blue;
+}
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.icon-wrapper {
+    border: 2px solid grey;
+    border-radius: 2.4em;
+    height: 2em;
+    width: 2em;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
