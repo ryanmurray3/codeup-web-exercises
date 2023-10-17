@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+img {
+    border: 2px black solid;
+    display: flex;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.sub-section {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+@media screen and (min-width:500px) {
+    selector {
+        flex-direction: column;
+    }
+}

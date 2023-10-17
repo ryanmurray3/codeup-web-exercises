@@ -1,11 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, maximum-scale=1">
-  <title>$Title$</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, maximum-scale=1">
+	<title>order-pizza</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/custom.css">
 </head>
+
 <body>
-$END$
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+	
+		<a class="navbar-brand" href="#">Pizza World</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="#">Order Online</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Link</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+					   aria-expanded="false">
+						Menu
+					</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Action</a></li>
+						<li><a class="dropdown-item" href="#">Another action</a></li>
+						<li>
+							<hr class="dropdown-divider">
+						</li>
+						<li><a class="dropdown-item" href="#">Something else here</a></li>
+					</ul>
+				</li>
+			</ul>
+			<form class="d-flex input-group-sm " role="search">
+				<input class="form-control me-1" type="search" placeholder="Zip Code" aria-label="Search">
+				<button class="btn btn-outline-success text-nowrap" type="submit">Search Stores Near You</button>
+			</form>
+			
+			
+		</div>
+	</div>
+</nav>
+<div class="container-fluid">
+<div class="jumbotron my-4 p-2 d-none d-md-flex align-items-center" style="background-image: url('img/pizza1.png')">
+	<div class="bg-light p-2 w-100 text-black bg-opacity-75 text-center">
+		<h1>Welcome to Pizza World!</h1>
+	</div>
+</div>
+
+<div>
+	<h2>Build Your Own Pizza!</h2>
+</div>
+<ul class="nav nav-tabs">
+	<li class="nav-item">
+		<a class="nav-link active" data-bs-toggle="tab" data-bs-target="#size-and-crust" href="#"><span class="badge bg-secondary">1</span> Size and Crust</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="#" data-bs-toggle="tab" data-bs-target="#cheese-and-sauce"><span class="badge bg-secondary">2</span> Cheese and Sauce</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="#" data-bs-toggle="tab" data-bs-target="#toppings"><span class="badge bg-secondary">3</span> Toppings</a>
+	</li>
+</ul>
+<div class="tab-content" id="myTabContent">
+	<div class="tab-pane fade show active" id="size-and-crust" >
+		<ul class="list-group">
+			<li class="list-group-item active">Choose Size and Crust</li>
+			<li class="list-group-item">
+				<ul class="my-2 list-group">
+					<li class="list-group-item list-group-item-secondary">Hand Tossed</li>
+					<li class="list-group-item">
+						Garlic seasoned crust with a rich, buttery taste.
+					</li>
+					<li class="list-group-item">
+						<input class="form-check-input" type="radio" name="crispy" id="hand-tossed-10">
+						<label class="form-check-label" for="hand-tossed-10">
+							Small (10")
+						</label>
+					</li>
+					<li class="list-group-item">
+						<input class="form-check-input" type="radio" name="crispy" id="hand-tossed-12">
+						<label class="form-check-label" for="hand-tossed-12">
+							Medium (12")
+						</label>
+					</li>
+				</ul>
+				<ul class="mt-4 mb-2 list-group">
+					<li class="list-group-item list-group-item-secondary">Crispy Thin</li>
+					<li class="list-group-item">
+						Thin enough for optimal crispy to crunchy ratio.
+					</li>
+					<li class="list-group-item">
+						<input class="form-check-input" type="radio" name="crispy" id="crispy-12">
+						<label class="form-check-label" for="crispy-12">
+							Medium (12")
+						</label>
+					</li>
+					<li class="list-group-item">
+						<input class="form-check-input" type="radio" name="crispy" id="crispy-14">
+						<label class="form-check-label" for="crispy-14">
+							Large (14")
+						</label>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+			<div class="tab-pane fade" id="cheese-and-sauce">
+				<ul class="list-group">
+					<li class="list-group-item active">Choose Cheese and Sauce</li>
+					<li class="list-group-item">
+						<ul class="my-2 list-group">
+							<li class="list-group-item list-group-item-secondary">Cheese</li>
+							<li class="list-group-item">
+								How much?
+							</li>
+							<li class="list-group-item">
+								<select class="form-select">
+									<option>Light</option>
+									<option selected>Normal</option>
+									<option>Extra</option>
+									<option>Double</option>
+								</select>
+							</li>
+						</ul>
+						<ul class="mt-4 mb-2 list-group">
+							<li class="list-group-item list-group-item-secondary">Sauce</li>
+							<li class="list-group-item">
+								What type?
+							</li>
+							<li class="list-group-item">
+								<select class="form-select">
+									<option selected>Tomato</option>
+									<option>Marinara</option>
+									<option>Spicy Marinara</option>
+									<option>Italian Creamy</option>
+								</select>
+							</li>
+							<li class="list-group-item">
+								How much?
+							</li>
+							<li class="list-group-item">
+								<select class="form-select">
+									<option>Light</option>
+									<option selected>Normal</option>
+									<option>Extra</option>
+								</select>
+							</li>
+						</ul>
+					
+					</li>
+					<li class="list-group-item list-group-item-secondary d-flex justify-content-end">
+						<button class="btn btn-primary">Next Step ></button>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="tab-pane fade" id="toppings">
+				<ul class="list-group">
+					<li class="list-group-item active">Choose Toppings</li>
+					<li class="list-group-item">
+						<ul class="my-2 list-group">
+							<li class="list-group-item list-group-item-secondary">Choose Meats</li>
+							<li class="list-group-item">
+								<input class="form-check-input" type="checkbox" id="beef">
+								<label class="form-check-label" for="beef">
+									Beef
+								</label>
+							</li>
+							<li class="list-group-item">
+								<input class="form-check-input" type="checkbox" id="ham">
+								<label class="form-check-label" for="ham">
+									Chicken Spicy
+								</label>
+							</li>
+							<li class="list-group-item">
+								<input class="form-check-input" type="checkbox" id="steak">
+								<label class="form-check-label" for="steak">
+									Pepperoni Chunky
+								</label>
+							</li>
+							<li class="list-group-item">
+								<input class="form-check-input" type="checkbox" id="bacon">
+								<label class="form-check-label" for="bacon">
+									Sausage Italian
+								</label>
+							</li>
+						</ul>
+						<ul class="mt-4 mb-2 list-group">
+							<li class="list-group-item list-group-item-secondary">Choose Non Meats</li>
+							<li class="list-group-item">
+								<input class="form-check-input" type="checkbox" checked id="onions">
+								<label class="form-check-label" for="onions">
+									Extra Cheese
+								</label>
+							</li>
+							<li class="list-group-item">
+								<input class="form-check-input" type="checkbox" checked id="mushrooms">
+								<label class="form-check-label" for="mushrooms">
+									Fruits
+								</label>
+							</li>
+							<li class="list-group-item">
+								<input class="form-check-input" type="checkbox" checked id="jalapenos">
+								<label class="form-check-label" for="jalapenos">
+									Vegetables
+								</label>
+							</li>
+						</ul>
+					</li>
+					<li class="list-group-item list-group-item-secondary d-flex justify-content-end">
+						<button class="btn btn-primary">Checkout <i class="fas fa-shopping-cart"></i></button>
+					</li>
+				</ul>
+			
+			</div>
+	</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+				integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+				crossorigin="anonymous">
+</script>
+
 </body>
 </html>
