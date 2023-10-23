@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<script>
+	"use strict";
+	
+	document.addEventListener("keyup", event => console.log(event.key) );
+	
+	let keySequence = [];
+	
+	document.addEventListener('keydown', function(event) {
+		keySequence.push(event.key);
+		
+		if (keySequence.join('') === 'ArrowUp,ArrowUp,ArrowDown,ArrowDown,ArrowLeft,ArrowRight,ArrowLeft,ArrowRight,KeyB,KeyA,Enter') {
+			alert("You did it!");
+			keySequence = []; // Reset the key sequence
+		}
+	});
+	
+
+</script>
+</body>
+</html>
+
+<!--Allow the user to enter the Konami Code: "↑ ↑ ↓ ↓ ← → ← → b a enter" (the return key)-->
+<!--Find the matching sequence using the code above for each key in the Konami Code.-->
+<!--Don't worry about capital a or b just check for lowercase.-->
+<!--After the correct Konami Code sequence is inputted, have the script alert the user: "You have added 30 lives! Other ideas:-->
+<!--Change the background screen.-->
+<!--Play a sound.-->
+<!--Be creative!-->
